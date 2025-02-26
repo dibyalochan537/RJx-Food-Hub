@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJx:Food Hub</title>
+    <link rel="icon" href="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/icon.png?raw=true">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        
+        *{
+            margin:0;
+            padding:0;
+        }
+        /* body{
+            margin-bottom:5rem;
+        } */
+        /* Header *************************************************************************************************************************************/
+        header{
+            height:23rem;
+            background-image:url("https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/nav-log.png?raw=true");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:white;
+        }
+        .nav{
+            display:flex;
+            height:3rem;
+            /* background-color: rebeccapurple; */
+            align-items: center;
+        }
+        .nav-log{
+            width:20%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            font-size:1.5rem;
+        }
+        .nav-bar{
+            width:80%;
+        }
+        .nav-bar ul{
+            font-size: 1.2rem;
+            display:flex;
+            justify-content: right;
+            align-items: center;
+            list-style:none;
+        }
+        .nav-bar ul li{
+            margin-right:7rem;
+        }
+        /* Nav-main */
+        .nav-main{
+            margin-top:2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav-main-logo{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:4rem;
+            font-family:Elephant;
+        }
+        .nav-main-logo img{
+            height:3.5rem;
+        }
+        .nav-main-text{
+            margin-top:1rem;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .nav-main-text p{
+            font-size:3rem;
+        }
+        .nav-main-search{
+            margin-top:2rem;
+            display:flex;
+            height:3rem;
+            width:50rem;
+            align-items: center;
+            background-color:white;
+            border-radius:10px;
+        }
+        .nav-main-search i{
+            color:black;
+        }
+        .nav-main-search input{
+            outline: none;
+            border:none;
+            font-size:1.3rem;
+            width:100%;
+        }
+        .nms-location{
+            display:flex;
+            align-items: center;
+            width:40%;
+        }
+        .nmsl-icon{
+            width:15%;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nmsl-input{
+            width:70%;
+        }
+        .nmsl-drop{
+            width:15%;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nms-restrurant{
+            display:flex;
+            align-items: center;
+            width:70%;
+        }
+        .nmsr-search-icon{
+            width:6%;
+            /* background-color:black; */
+        }
+
+        .nmsr-input{
+            width:90%;
+        }
+        /* Main ******************************************************Main*******************************************************************************/
+        .features-rjx{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .features-cards{
+            margin-top:2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width:70%;
+            /* background-color: red; */
+            /* overflow: hidden; */
+        }
+        .card{
+            height:15rem;
+            width:21rem;
+            /* background-color:blue; */
+            border-radius:15px; 
+            border:.1px solid rgb(68, 68, 68); 
+        }
+        .card:hover{
+            transform: scale(1.05);
+        }
+        .features-image{
+            height:60%;
+        }
+        .features-image img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            border-top-left-radius:15px;
+            border-top-right-radius:15px;   
+        }
+        .features-name{
+            height:20%;
+            display: flex;
+            align-items: center;
+        }
+        .features-name h2{
+            margin-left:1rem;
+        }
+        .features-description{
+            height:20%;
+            display: flex;
+            align-items: center;
+        }
+        .features-description p{
+            margin-left:1rem;
+            font-size:1.2rem;
+        }
+        /* Collection****************************************** */
+        .my-collections{
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .my-collection-all{
+            width:70%;
+            margin-top:2rem;
+            /* background-color: red; */
+        }
+        .mc-top p{
+            font-size:1.5rem;
+        }
+        .mc-cards{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top:1rem;
+        }
+        .mc-card{
+            height:20rem;
+            width:15rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius:10px;
+            color:rgb(228, 228, 228);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            text-align:center;
+            /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+        }
+        .mc-card:hover{
+            transform: scale(1.05);
+        }
+        /* Popular place in bhubaneswar*************************************** */
+        .popular-cities{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top:2rem;
+        }
+        .my-popular-cities{
+            margin-top:1.5rem;
+            width:70%;
+            /* background-color: red; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap:1.5rem; /* Spacing between grid items */
+        }
+        .mpc-card{
+            display:flex;
+            align-items: center;
+            background-color: white;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height:5rem;
+        }
+        .mpc-card:hover{
+            transform:scale(1.0009);
+            box-shadow:0px 2.5px 2.5px 0px black;
+        }
+        .mpcc-place-details{
+            width:90%;
+            /* background-color: red; */
+        }
+        .mpcc-place-details p{
+            margin-top:1rem;
+        }
+        .mpcc-right-arrow{
+            width:10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Explore option near me********************************** */
+        .explore-more{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .exp-more{
+            margin-top:1rem;
+            width:70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .explore-m-btn{
+            display: flex;
+            align-items: center;
+            height:4rem;
+            width:100%;
+            background-color:rgb(242, 239, 241);
+            margin-top:1rem;
+            border-radius: 5px;
+        }
+        .explore-m-btn:hover{
+            box-shadow:2px 2px 5px 0px black;
+        }
+        .emb-text{
+            width:90%;
+            display: flex;
+            align-items: center;
+        }
+        .emb-text p{
+            margin-left:1rem;
+            font-size:1.5rem;
+        }
+        .emb-arrow{
+            width:10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Footer*************************************************Footer****************************************************** */
+        footer{
+            margin-top:4rem;
+            background-color: rgb(236, 236, 236);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer{
+            margin-top:2rem;
+            width:70%;
+        }
+        .foot-nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .foot-logo{
+            display: flex;
+            width:20%;
+            align-items: center;
+            justify-content: start;
+        }
+        .foot-logo p{
+            font-size:2rem;
+            font-weight:900;
+        }
+        .foot-lan-ind{
+            display: flex;
+            align-items: center;
+        }
+        .foot-flag-img img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .foot-flag-img img{
+            width:1.5rem;
+        }
+        .foot-country{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left:.5rem;
+            padding-right:.5rem;
+            height:2.5rem;
+            width:8rem;
+            margin-right:2rem;
+            border:1px solid black;
+            border-radius:5px;
+        }
+        .foot-country-name p{
+            font-size: 1.2rem;
+        }
+        .foot-language{
+            height:2.5rem;
+            width:8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left:.5rem;
+            padding-right:.5rem;
+            border:1px solid black;
+            border-radius:5px;
+        }
+        .foot-main{
+            display: flex;
+            justify-content: space-between;
+        }
+        .foot-main-items{
+            margin-top:1rem;
+            height:20rem;
+            width:14rem;
+            /* background-color: red; */
+        }
+        .foot-main-items-value{
+            list-style: none;
+        }
+        .foot-main-items-value li{
+            margin-top:1rem;
+            font-size: 1.1rem;
+        }
+        .foot-main-items-value li img{
+            height:2rem;
+            border-radius:100%;
+        }
+        .foot-main-items-value li img:hover{
+            transform:scale(1.05);
+            box-shadow:2.5px 2.5px 2.5px 0px black;;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="nav-log">
+                <!-- Icon for phone -->
+                <h4>Get the App</h4>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li>Investor Relation</li>
+                    <li>Add Restrurant</li>
+                    <li>Log In</li>
+                    <li>Sign Up</li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-main">
+            <div class="nav-main-logo">
+                <p>RJx: Food Hub</p>
+            </div>
+            <div class="nav-main-text">
+                <p>Discover the best food & drinks in Bhubaneswar</p>
+            </div>
+            <div class="nav-main-search">
+                <div class="nms-location">
+                    <div class="nmsl-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="nmsl-input">
+                        <input type="text" placeholder="Bhubaneswar">
+                    </div>
+                    <div class="nmsl-drop"><i class="fa-solid fa-caret-down"></i></div>
+                </div>
+                <div class="nms-restrurant">
+                    <div class="nmsr-search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="nmsr-input">
+                        <input type="text" placeholder="search for restrurant,cuisine or a dish">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="features-rjx">
+            <div class="features-cards">
+                <div class="card">
+                    <div class="features-image">
+                        <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/order-online.png?raw=true" alt="">
+                    </div>
+                    <div class="features-name">
+                        <h2>Online Order</h2>
+                    </div>
+                    <div class="features-description">
+                        <p>Stay home and order to your doorstep</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="features-image">
+                        <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/dining.png?raw=true" alt="">
+                    </div>
+                    <div class="features-name">
+                        <h2>Dining</h2>
+                    </div>
+                    <div class="features-description">
+                        <p>View the city's favourite dining venues</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="features-image">
+                        <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/night-clubs.png?raw=true" alt="">
+                    </div>
+                    <div class="features-name">
+                        <h2>Nightlife & Clubs</h2>
+                    </div>
+                    <div class="features-description">
+                        <p>Explore the city's top nightlife outlets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-collections">
+            <div class="my-collection-all">
+                <div class="mc-top">
+                    <h1>Collections</h1>
+                    <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Bhubaneswar, based on trends.</p>
+                </div>
+                <div class="mc-cards">
+                    <div class="mc-card" style="background-image:url('https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/luxury-dining.png?raw=true');">
+                        <div class="mc-card-name">
+                            <h3>Best Luxury Dining Places</h3>
+                        </div>
+                        <div class="mc-card-place">
+                            <p>7 Places</p>
+                        </div>
+                    </div>
+                    <div class="mc-card" style="background-image:url('https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/best-bar-pubs.png?raw=true');">
+                        <div class="mc-card-name">
+                            <h3>Best Bar & Pubs</h3>
+                        </div>
+                        <div class="mc-card-place">
+                            <p>27 Places</p>
+                        </div>
+                    </div>
+                    <div class="mc-card" style="background-image:url('https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/authentic-odia-food.png?raw=true');">
+                        <div class="mc-card-name">
+                            <h3>Odia Authentic Food</h3>
+                        </div>
+                        <div class="mc-card-place">
+                            <p>39 Places</p>
+                        </div>
+                    </div>
+                    <div class="mc-card" style="background-image:url('https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/grate-cafes.png?raw=true');">
+                        <div class="mc-card-name">
+                            <h3>Great Cafes</h3>
+                        </div>
+                        <div class="mc-card-place">
+                            <p>50 Places</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popular-cities">
+            <div style="width:70%;margin-top:3rem;">
+                <h1>Popular localities in and around Bhubaneswar</h1>
+            </div>
+            <div class="my-popular-cities">
+                <div class="mpc-card">
+                    <div class="mpcc-place-details">
+                        <div class="mpccpd-name">
+                            <h3>Patia</h3>
+                        </div>
+                        <div class="mpccpd-count">
+                            <p>715 Places</p>
+                        </div>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="mpc-card">
+                    <div class="mpcc-place-details">
+                        <div class="mpccpd-name">
+                            <h3>chandrasekharpur</h3>
+                        </div>
+                        <div class="mpccpd-count">
+                            <p>352 Places</p>
+                        </div>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="mpc-card">
+                    <div class="mpcc-place-details">
+                        <div class="mpccpd-name">
+                            <h3>Sahid Nagar</h3>
+                        </div>
+                        <div class="mpccpd-count">
+                            <p>239 Places</p>
+                        </div>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="mpc-card">
+                    <div class="mpcc-place-details">
+                        <div class="mpccpd-name">
+                            <h3>Jaydev Vihar</h3>
+                        </div>
+                        <div class="mpccpd-count">
+                            <p>128 Places</p>
+                        </div>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="mpc-card">
+                    <div class="mpcc-place-details">
+                        <div class="mpccpd-name">
+                            <h3>Nayapalli</h3>
+                        </div>
+                        <div class="mpccpd-count">
+                            <p>171 Places</p>
+                        </div>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="mpc-card">
+                    <div class="mpcc-place-details">
+                        <div class="mpccpd-name">
+                            <h3>Kharbela Nagar</h3>
+                        </div>
+                        <div class="mpccpd-count">
+                            <p>168 Places</p>
+                        </div>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="mpc-card">
+                    <div class="mpcc-place-details">
+                        <div class="mpccpd-name">
+                            <h3>Unit 4</h3>
+                        </div>
+                        <div class="mpccpd-count">
+                            <p>91 Places</p>
+                        </div>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="mpc-card">
+                    <div class="mpcc-place-details">
+                        <div class="mpccpd-name">
+                            <h3>Lakshmi Sagar</h3>
+                        </div>
+                        <div class="mpccpd-count">
+                            <p>156 Places</p>
+                        </div>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+                <div class="mpc-card">
+                    <div class="mpcc-place-details" style="display: flex;justify-content: center;align-items: center;">
+                        <h2>See More</h2>
+                    </div>
+                    <div class="mpcc-right-arrow">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-more">
+            <div style="width:70%;margin-top:4rem;">
+                <h1>Explore options near me</h1>
+            </div>
+            <div class="exp-more">
+                <div class="explore-m-btn">
+                    <div class="emb-text">
+                        <p>Popular cuisines near me</p>
+                    </div>
+                    <div class="emb-arrow">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="explore-m-btn">
+                    <div class="emb-text">
+                        <p>Popular restaurant types near me</p>
+                    </div>
+                    <div class="emb-arrow">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="explore-m-btn">
+                    <div class="emb-text">
+                        <p>Top restaurant chains</p>
+                    </div>
+                    <div class="emb-arrow">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="explore-m-btn">
+                    <div class="emb-text">
+                        <p>Cities we deliver to</p>
+                    </div>
+                    <div class="emb-arrow">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="foot-nav">
+                <div class="foot-logo">
+                    <p>RJx:Food Hub</p>
+                </div>
+                <div class="foot-lan-ind">
+                    <div class="foot-country">
+                        <div class="foot-flag-img">
+                            <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/india-flag.png?raw=true" alt="">
+                        </div>
+                        <div class="foot-country-name">
+                            <p>India</p>
+                        </div>
+                        <div class="foot-arrow">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="foot-language">
+                        <div class="foot-flag-img">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="foot-country-name">
+                            <p>English</p>
+                        </div>
+                        <div class="foot-arrow">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-main">
+                <div class="foot-main-items">
+                    <div class="foot-main-items-title">
+                        <h3>About Zomato</h3>
+                    </div>
+                    <div class="foot-main-items-value">
+                        <li>Who We Are</li>
+                        <li>Blog</li>
+                        <li>Work With Us</li>
+                        <li>Investor Relation</li>
+                        <li>Report Fraud</li>
+                        <li>Press Kit</li>
+                        <li>Contact Us</li>
+                    </div>
+                </div>
+                <div class="foot-main-items">
+                    <div class="foot-main-items-title">
+                        <h3>Zomaverse</h3>
+                    </div>
+                    <div class="foot-main-items-value">
+                        <li>Rjx:Food Hub</li>
+                        <li>RJx:Grocery</li>
+                        <li>District</li>
+                        <li>Feeding India</li>
+                        <li>Hyperpure</li>
+                        <li>RJx:Food Hub Live</li>
+                        <li>Weather Union</li>
+                    </div>
+                </div>
+                <div class="foot-main-items">
+                    <div class="foot-main-items-title">
+                        <h3>For Restaurants</h3>
+                    </div>
+                    <div class="foot-main-items-value">
+                        <li>Partner With Us</li>
+                        <li>Apps for You</li>
+                    </div>
+                </div>
+                <div class="foot-main-items">
+                    <div class="foot-main-items-title">
+                        <h3>Learn More</h3>
+                    </div>
+                    <div class="foot-main-items-value">
+                        <li>Privacy</li>
+                        <li>Security</li>
+                        <li>Terms</li>
+                    </div>
+                </div>
+                <div class="foot-main-items">
+                    <div class="foot-main-items-title">
+                        <h3>Social links</h3>
+                    </div>
+                    <div class="foot-main-items-value">
+                        <li>
+                            <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/linkdn.png?raw=true" alt="">
+                            <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/instagram.png?raw=true" alt="">
+                            <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/telegram.png?raw=true" alt="">
+                            <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/twitter.png?raw=true" alt="">
+                            <img src="https://github.com/dibyalochan537/RJx-Food-Hub/blob/main/assets/image/facebook.png?raw=true" alt="">
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-foot">
+                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2025 © RJx™ Ltd. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
